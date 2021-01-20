@@ -12,13 +12,13 @@ export class LibrosController {
         return 'Crear libro';
     }
 
-    @Put()
-    modificarLibro(): string {
-        return 'Modificar libro';
+    @Put(':id')
+    modificarLibro(@Param('id') idLibro: string): string {
+        return `Modificar libro ${idLibro}`;
     }
 
-    @Delete()
-    borrarLibro(): string {
-        return 'Borrar libro';
+    @Delete(':id')
+    borrarLibro(@Param('id') idLibro: string): string {
+        return `Borrar libro ${idLibro}`;
     }
 }
